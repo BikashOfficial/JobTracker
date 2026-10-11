@@ -1,6 +1,6 @@
-# ApplyTrack --- Job Application Tracker
+# JobTracker--- Job Application Tracker
 
-ApplyTrack is a MERN-stack web application for tracking job applications
+JobTracker is a MERN-stack web application for tracking job applications
 in one place. Users can register and log in, record jobs they have
 applied for, update application details and statuses, and view an
 overview of their progress.
