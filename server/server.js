@@ -11,6 +11,7 @@ import {
 
 import authRoutes from "./routes/authRoutes.js";
 import applicationRoutes from "./routes/applicationRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -43,6 +44,7 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/applications", applicationRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
