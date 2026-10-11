@@ -28,14 +28,32 @@ using HTTP-only cookies, REST API
 Your exact structure may vary slightly.
 
 ``` text
-ApplyTrack/
+JobTracker/
 ├── client/
+│   ├── public/
 │   ├── src/
-│   └── package.json
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── README.md
+│
 ├── server/
-│   ├── src/
-│   └── package.json
-├── .gitignore
+│   ├── config/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── node_modules/
+│   ├── .env
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+│
 └── README.md
 ```
 
@@ -67,7 +85,7 @@ Create `server/.env` using the exact environment variable names your
 backend reads. For example:
 
 ``` env
-PORT=5000
+PORT=3000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=replace_with_a_long_random_secret
 CLIENT_URL=http://localhost:5173
@@ -95,13 +113,13 @@ cd client
 npm install
 ```
 
-The Axios configuration may already use `http://localhost:5000/api`. If
+The Axios configuration may already use `http://localhost:3000/api`. If
 the frontend reads an API URL from an environment variable, create
 `client/.env` with the exact variable name expected by your code. For
 example:
 
 ``` env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:3000/api
 ```
 
 Only add this variable if your frontend is configured to read it.
