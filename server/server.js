@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.get("/api/health", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "ApplyTrack API is running",
+    message: "JobTracker API is running",
   });
 });
 
@@ -51,6 +51,6 @@ app.use(errorHandler);
 
 
 app.listen(PORT, () => {
-  console.log(`ApplyTrack API running on port ${PORT}`);
+  console.log(`JobTracker API running on port ${PORT}`);
 });
 
