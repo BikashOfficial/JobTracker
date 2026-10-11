@@ -10,6 +10,7 @@ import {
 } from "./middlewares/errorMiddleware.js";
 
 import authRoutes from "./routes/authRoutes.js";
+import applicationRoutes from "./routes/applicationRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,6 +42,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/applications", applicationRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
